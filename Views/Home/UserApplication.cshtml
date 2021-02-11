@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Your Restaurant List";
+}
+
+@model RestaurantAssignment.Models.UserList
+<!--This is the form that sends the persons suggestion-->
+<div class="text-center">
+    <form method="post" asp-action="UserApplication">
+        <div>
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" />
+        </div>
+        <br />
+        <div>
+            <label asp-for="RestName">Restaurant Name</label>
+            <input asp-for="RestName" />
+        </div>
+        <br />
+        <div>
+            <label asp-for="FavFood">Favorite Dish</label>
+            <input asp-for="FavFood" />
+        </div>
+        <br />
+        <div>
+            <label asp-for="PhoneNum">Phone Number</label>
+            <input asp-for="PhoneNum" placeholder="123-456-7890" type="tel" />
+        </div>
+        
+        <br />
+        <br />
+        <button class="alert-light" type="submit">Submit Your Restaurant Here</button>
+
+
+    </form>
+
+    <div asp-validation-summary="All"></div>
+</div> 

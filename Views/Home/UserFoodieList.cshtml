@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Your Favorite Restaurant";
+}
+
+@model IEnumerable<RestaurantAssignment.Models.UserList>
+   
+
+    <div>
+        <center>
+            <h2>Here are all the Restaurants in your list</h2>
+            <div class="list-group-item align-content-center">
+                <table class="table-bordered">
+                    <thead class="list-group-item-danger text-center">
+                        <tr><th>Name</th><th>Restaurant Name</th><th>Favorite Dish</th><th>Phone #</th></tr>
+                    </thead>
+
+                    <tbody class="table-striped text-center">
+                        @foreach (RestaurantAssignment.Models.UserList x in Model)
+                        {//This is the list of suggestions outputted in a table
+                            <tr>
+                                <td>@x.Name</td>
+                                <td>@x.RestName</td>
+                                <td>@x.FavFood</td>
+                                <td>@x.PhoneNum</td>
+
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+            <br />
+            <br />
+            <a asp-action="Index">Click here to return to main page</a>
+            <br />
+            <br />
+            <a asp-action="UserApplication">Click here to add another restaurant</a>
+        </center>
+    </div>
+
+

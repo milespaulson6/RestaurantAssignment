@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Foodie Top 5 Restaurants";
+}
+
+@model IEnumerable<string> 
+
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div class="text-center">
+        <header>
+            <h1 class="bg-info text-white text-center">Top 5 Restaurants of All Time</h1>
+        </header>
+        <div class="list-group">
+            <ul>
+                @foreach (string i in Model)
+                {
+                    <li class="list-group-item">@i </li>
+                }
+            </ul>
+        </div>
+
+    </div>
+</body>

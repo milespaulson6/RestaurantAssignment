@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Utah Foodie Website";
+}
+
+@model IEnumerable<string>
+
+    <body>
+        <div class="text-center">
+            <h1 class="display-4">Welcome to Utah Foodie!</h1>
+
+            <img src="~/avatars-000322171184-w2mq29-t500x500.jpg" height="500" />
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="text-center">
+            <header>
+                <h1 class="bg-info text-white text-center">Top 5 Restaurants of All Time</h1>
+            </header>
+            <div class="list-group">
+                <ul>
+                    @foreach (string i in Model)
+                    {
+                        <li class="list-group-item">@Html.Raw(i) </li>
+                    }
+                </ul>
+            </div>
+
+        </div>
+    </body>
+
+
